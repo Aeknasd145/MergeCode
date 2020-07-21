@@ -38,4 +38,4 @@ verileri okutmak için;
   İçeriği okutmak için: <code>echo $content;</code>
 
 <h3>Örnek Görseller</h3>
-![anasayfa](https://user-images.githubusercontent.com/67686692/88078037-a1450c80-cb84-11ea-97de-c296fe601eb4.png)
+<img src="https://user-images.githubusercontent.com/67686692/88078037-a1450c80-cb84-11ea-97de-c296fe601eb4.png"/>
