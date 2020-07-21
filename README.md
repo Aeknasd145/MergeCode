@@ -19,7 +19,7 @@
 
 <h4>Örnek:</h4>
 
-verileril çekmek için;
+verileri çekmek için;
 
   <code>$hakkimizda_sorgu = $conn->query("SELECT * FROM about_us WHERE id=1 ");</code>
   
