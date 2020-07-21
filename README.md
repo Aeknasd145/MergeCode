@@ -37,6 +37,11 @@ verileri okutmak için;
   
   İçeriği okutmak için: <code>echo $content;</code>
 
+<h4>Varsayılan Panel Dilini Değiştirmek</h4>
+
+Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <code>$_SESSION["lang"]="tr";</code> kodunu tr/en olarak değiştirerek panelin varsayılan dilini değiştirebilirsiniz.
+
+
 <h3>Örnek Görseller</h3>
 
 <h4>Ana Sayfa</h4>
