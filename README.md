@@ -46,3 +46,7 @@ verileri okutmak için;
 <h4>Kullanıcı Analiz Sayfası (Abone analiz sayfasıyla aynı tasarımda)</h4>
 
 <img src="https://user-images.githubusercontent.com/67686692/88078806-8f179e00-cb85-11ea-93ec-43ce55096f64.png"/>
+
+<h4>Ayarlar Sayfası</h4>
+
+<img src="https://user-images.githubusercontent.com/67686692/88079079-e3228280-cb85-11ea-984d-8abedfe1f2c9.png"/>
