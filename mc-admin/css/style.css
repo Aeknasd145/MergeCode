@@ -1,0 +1,146 @@
+/* Main CSS */
+
+html, body {
+	height:100%;
+}
+a {
+	text-decoration: none !important;
+}
+
+/* Sidebar CSS */
+
+#sidebar {
+	background-color: #0c1a1e;
+	color: white;
+	height: 100%;
+	z-index: 999;
+	position: fixed;
+	float: left;
+	padding: 0;
+}
+.logo {
+	margin-top: 10px;
+	text-align: center;
+}
+#menu {
+	font-size: 18px;
+	text-align: center;
+}
+ul#menu {
+	margin-top: 20px;
+	padding-left: 0px;
+}
+ul#menu>a>li, ul#menu>li, .dropdown-menu>a>li, .dropdown {
+	border-bottom: solid 1px white;
+	list-style-type: none;
+	padding: 10px;
+	color: white;
+}
+.first-li {
+	border-top: solid 1px white;
+}
+ul.dropdown-menu>a>li {
+	border-bottom: solid 1px white;
+}
+.dropdown>button{
+	color: white;
+}
+.dropdown>button:hover, #menu>a>li:hover {
+	color: #00ffa1 !important;
+}
+.icon-css {
+	margin-right: 12px;
+}
+#main-content{
+	margin-left: 16.4%;
+}
+#sidebar-mobile{
+	display: none;
+}
+@media screen and (max-width: 700px) {
+	#sidebar {
+		display: none;
+	}
+	#sidebar-mobile{
+		color: white;
+		height: 100%;
+		z-index: 999;
+		position: fixed;
+		float: left;
+		padding: 0;
+		display: block;
+	}
+	.logo {
+		margin-top: 0;
+		padding-top: 14%; 
+	}
+	#main-content {
+		margin-left: 0 !important;
+	}
+}
+
+
+
+/* Index.php CSS */
+.card-css{
+	margin-top: 2%;
+}
+
+.card-counter{
+	box-shadow: 2px 2px 10px #DADADA;
+	margin: 5px;
+	padding: 20px 10px;
+	background-color: #fff;
+	height: 100px;
+	border-radius: 5px;
+	transition: .3s linear all;
+}
+
+.card-counter:hover{
+	box-shadow: 4px 4px 20px #DADADA;
+	transition: .3s linear all;
+}
+
+.card-counter.primary{
+	background-color: #007bff;
+	color: #FFF;
+}
+
+.card-counter.danger{
+	background-color: #ef5350;
+	color: #FFF;
+}  
+
+.card-counter.success{
+	background-color: #66bb6a;
+	color: #FFF;
+}  
+
+.card-counter.info{
+	background-color: #26c6da;
+	color: #FFF;
+}  
+
+.card-counter i{
+	font-size: 5em;
+	opacity: 0.2;
+}
+
+.card-counter .count-numbers{
+	position: absolute;
+	right: 35px;
+	top: 20px;
+	font-size: 32px;
+	display: block;
+}
+
+.card-counter .count-name{
+	position: absolute;
+	right: 35px;
+	top: 65px;
+	font-style: italic;
+	text-transform: capitalize;
+	opacity: 0.5;
+	display: block;
+	font-size: 18px;
+}  

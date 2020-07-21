@@ -1,0 +1,79 @@
+#omega{
+    padding:0 2em;
+}
+#omega-button{
+    color: black;
+    display:none;
+}
+#omega-content nav ul {
+    display:inline-block;
+    margin-right:2em;
+}
+#omega-content nav ul li a{
+    padding:0 0.5em;
+}
+#omega-content nav ul li, #omega-content #logo, #omega-content nav {
+    display: inline-block;
+}
+.omega-links{
+    display:inline-block;
+}
+#omega-content{
+    float: right;
+}
+#omega-overlay {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+#omega-sidebar{
+    display:none;
+    position: fixed;
+    width:70%;
+    z-index: 20;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: #000;
+    transform: translateX(-100%);
+    transition: transform .2s ease-in-out;
+}
+#omega-sidebar-header{
+    background-image: url(../images/sidebar/bg.png);
+    background-size: cover;
+    height:100px;
+}
+#omega-sidebar-body{
+    padding:1em;
+}
+#omega-sidebar-body nav ul li{
+    list-style: none;
+    display: block;
+}
+
+@media only screen and (max-width: 850px){
+
+    #omega-content{
+        display:none;
+    }
+    #omega-button{
+        font-size: 20px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    .omega-links{
+        display: block;
+        margin-top:2em;
+    }
+    #omega-button, #omega-sidebar, .omega-activated #omega-overlay{
+        display:block;
+    }
+    .omega-activated #omega-sidebar{
+        transform: translateX(0);
+    }
+}

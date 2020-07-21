@@ -1,0 +1,2 @@
+1 - Hakkımızda sayfası için başlık ve metin alıyor. Hakkımızda sayfası oluşturun.
+2 - Seo ayarları bölümündeki içeriklerin tema ile bağlanması gerek.
