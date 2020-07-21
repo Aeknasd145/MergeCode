@@ -38,4 +38,11 @@ verileri okutmak için;
   İçeriği okutmak için: <code>echo $content;</code>
 
 <h3>Örnek Görseller</h3>
+
+<h4>Ana Sayfa</h4>
+
 <img src="https://user-images.githubusercontent.com/67686692/88078037-a1450c80-cb84-11ea-97de-c296fe601eb4.png"/>
+
+<h4>Kullanıcı Analiz Sayfası (Abone analiz sayfasıyla aynı tasarımda)</h4>
+
+<img src="https://user-images.githubusercontent.com/67686692/88078806-8f179e00-cb85-11ea-93ec-43ce55096f64.png"/>
