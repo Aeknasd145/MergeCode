@@ -1,12 +1,14 @@
-<?php include("header.php"); 
-
+<?php 
+	include("header.php"); 
 	$security_query = $conn->query("SELECT * FROM users WHERE id='$id' ");
 	while ($security_query_read = mysqli_fetch_array($security_query)) {
 		$username	= 	$security_query_read["username"];
 		$password	= 	$security_query_read["password"];
 	}
 ?>
-
+<script src="https://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="security-settings.js"></script>
+<script type="text/javascript">$(function(){});</script>
 	<div class="container-fluid h-100">
 		<div class="row h-100">
 			<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="sidebar">
@@ -77,7 +79,7 @@
 								</form>	
 							</div>			
 							<div class="tab-pane fade" id="pills-login-security" role="tabpanel" aria-labelledby="pills-login-security-tab">
-								<form action="" method="POST">
+								
 									<?php 
 										if($username=="admin"){
 											echo "Kullanıcı adınızın 'Admin' ve bu tarz basit şeyler olması Brute Force saldırıları için oldukça risklidir.<br><br>";
@@ -88,18 +90,24 @@
 									?>
 									<div class="col-12">
 										<h4>Giriş Denemesi</h4>
-										<p>Deneme Sınırı: <input type="number" name="login_attempt" placeholder="Varsayılan: 10"></p>
-										<p>Ban Süresi: <input type="number" name="time_out" placeholder="Varsayılan: 300 sn"></p>
-										<div class="form-check">
-											<?php 
-												// db de 1 se seçili, 0 sa seçili değil olacak. "checked"
-											?>
-										  <input class="form-check-input" type="checkbox" value="" name="save_ip" id="defaultCheck1" checked>
-										  <label class="form-check-label" for="defaultCheck1">IP Kaydet</label>
-										</div>
+										<form id="frm">
+											<div class="col-12" style="text-align: center;">
+							        			<div id="sonuc"></div><br />
+							        		</div>
+											<p>Deneme Sınırı: <input type="number" name="entry_limit" placeholder="Varsayılan: 5"></p>
+											<p>Ban Süresi: <input type="number" name="time_out" placeholder="Varsayılan: 300 sn"></p>
+											<!--<div class="form-check">
+												<?php 
+													// db de 1 se seçili, 0 sa seçili değil olacak. "checked"
+												?>
+											  <input class="form-check-input" type="checkbox" value="" name="save_ip" id="defaultCheck1" checked>
+											  <label class="form-check-label" for="defaultCheck1">IP Kaydet</label>
+											</div>-->
+											<input style="width: 100%; background-color: lightblue; border: solid 1px lightblue; border-radius: .25rem;
+							 padding: 10px; font-family: Arial, Helvetica, sans-serif; margin-top: 2%" type="button" id="btn" value="<?php echo $lang["save"];?>">
+										</form>
+										
 									</div><br>
-									<button type="submit" class="btn btn-primary">Kaydet</button>
-								</form>	
 							</div>	
 							<div class="tab-pane fade" id="pills-db-security" role="tabpanel" aria-labelledby="pills-db-security-tab">
 								<form action="" method="POST">
@@ -115,7 +123,30 @@
 							</div>	
 							<div class="tab-pane fade" id="pills-htaccess-security" role="tabpanel" aria-labelledby="pills-htaccess-security-tab">
 								<form action="" method="POST">
-									...
+									HTACCESS Ayarları<br>
+									404 yönlendirmesi için: ErrorDocument 404 https://www.site.com/404.php<br>
+									dosya yönlendirme (uzantı kaldırmak için vs): RewriteRule ^index/?$ index.php [NC,L]<br>
+									Optimizasyon için:<br>
+									<\IfModule mod_expires.c>
+									  ExpiresActive On
+									  # Images
+									  ExpiresByType image/jpeg "access plus 1 year"
+									  ExpiresByType image/gif "access plus 1 year"
+									  ExpiresByType image/png "access plus 1 year"
+									  ExpiresByType image/webp "access plus 1 year"
+									  ExpiresByType image/svg+xml "access plus 1 year"
+									  ExpiresByType image/x-icon "access plus 1 year"
+									  # Video
+									  ExpiresByType video/mp4 "access plus 1 year"
+									  ExpiresByType video/mpeg "access plus 1 year"
+									  # CSS, JavaScript
+									  ExpiresByType text/css "access plus 1 month"
+									  ExpiresByType text/javascript "access plus 1 month"
+									  ExpiresByType application/javascript "access plus 1 month"
+									  # Others
+									  ExpiresByType application/pdf "access plus 1 month"
+									  ExpiresByType application/x-shockwave-flash "access plus 1 month"
+									<\/IfModule>
 									<button type="submit" class="btn btn-primary">Kaydet</button>
 								</form>	
 							</div>	
@@ -155,4 +186,8 @@
 <!-- Pie Chart JS -->
 <script src="js/chart/chart.min.js"></script>
 <script src="js/chart/security/chart-analysis.js"></script>
-<?php include("footer.php"); ?>
+
+<!-- Font Awesome Kit -->
+<script src="https://kit.fontawesome.com/acae1827b1.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
