@@ -18,7 +18,7 @@
 						<input name="pass" id="pass" type="password" class="input" data-type="password"/>
 					</div>
 					<div class="group">
-						<input type="submit" class="button" value="Sign In">
+						<input type="submit" class="button" value="Sign In"/>
 					</div>
 				</form>
 				<div class="hr"></div>
@@ -26,10 +26,10 @@
 			<div class="for-pwd-htm">
 				<div class="group">
 					<label for="user" class="label">Username or Email</label>
-					<input id="user" type="text" class="input">
+					<input id="user" type="text" class="input"/>
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Reset Password">
+					<input type="submit" class="button" value="Reset Password"/>
 				</div>
 				<div class="hr"></div>
 			</div>
