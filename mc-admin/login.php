@@ -11,11 +11,11 @@
 				<form action="operations/login.php" method="POST">
 					<div class="group">
 						<label for="user" class="label">E-Mail</label>
-						<input name="email" id="user" type="text" class="input">
+						<input name="email" id="user" type="text" class="input"/>
 					</div>
 					<div class="group">
 						<label for="pass" class="label">Password</label>
-						<input name="pass" id="pass" type="password" class="input" data-type="password">
+						<input name="pass" id="pass" type="password" class="input" data-type="password"/>
 					</div>
 					<div class="group">
 						<input type="submit" class="button" value="Sign In">
