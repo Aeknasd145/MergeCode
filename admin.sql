@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3308
--- Üretim Zamanı: 21 Tem 2020, 15:36:19
+-- Üretim Zamanı: 22 Tem 2020, 11:52:51
 -- Sunucu sürümü: 8.0.18
 -- PHP Sürümü: 7.3.12
 
@@ -60,6 +60,24 @@ CREATE TABLE IF NOT EXISTS `banned_ip` (
 -- --------------------------------------------------------
 
 --
+-- Tablo için tablo yapısı `login_attempt`
+--
+
+DROP TABLE IF EXISTS `login_attempt`;
+CREATE TABLE IF NOT EXISTS `login_attempt` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ip` varchar(50) NOT NULL,
+  `attempts` int(11) NOT NULL,
+  `attempts_date` date NOT NULL,
+  `time_out` int(11) NOT NULL DEFAULT '0',
+  `penalty_time` varchar(7) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ip` (`ip`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Tablo için tablo yapısı `mail_settings`
 --
 
@@ -90,11 +108,17 @@ INSERT INTO `mail_settings` (`id`, `host`, `port`, `secure`, `mail`, `password`)
 DROP TABLE IF EXISTS `security`;
 CREATE TABLE IF NOT EXISTS `security` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login_attempt` int(11) NOT NULL,
+  `entry_limit` int(11) NOT NULL,
   `time_out` int(11) NOT NULL,
-  `save_ip` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Tablo döküm verisi `security`
+--
+
+INSERT INTO `security` (`id`, `entry_limit`, `time_out`) VALUES
+(1, 10, 300);
 
 -- --------------------------------------------------------
 
