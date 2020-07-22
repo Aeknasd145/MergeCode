@@ -62,7 +62,8 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 <h2><u>Güncellemeler:</u></h2>
 
 <h4>22.07.2020:</h4>
-
+- Giriş sayfası için giriş sınırı eklendi.
+- Giriş sayfasındaki giriş sınırını belirlemek için admin paneldeki "Güvenlik Ayarları" menüsündeki "Giriş Güvenliği" sekmesi aktif hale getirildi.
 
 
 <h4>21.07.2020:</h4>
