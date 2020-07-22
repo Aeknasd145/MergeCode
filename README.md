@@ -1,6 +1,6 @@
 # MergeCode
 
-<h3>Kurulum:</h3>
+<h2>Kurulum:</h2>
 
 1 - Paneli indirip public_html içerisine yükleyin.
 
@@ -11,13 +11,15 @@
 4 - Seo ayarlarında başlık, açıklama, anahtar kelime, google analytics id ve google adsense id kaydetmekte ancak bunları yine temanıza entegre etmeniz gerekmektedir.
 
 
-<h3>"Hakkımızda" Sayfasını Entegre Etmek</h3>
+
+
+<h2>"Hakkımızda" Sayfasını Entegre Etmek</h2>
 
 - "Başlık için => $title" ve "İçerik için => $content" değişkenlerini kullanınız.
 
 - veri tabanındaki "about_us" tablosundan verileri çekeceksiniz.
 
-<h4>Örnek:</h4>
+<h3>Örnek:</h3>
 
 verileri çekmek için;
 
@@ -41,7 +43,7 @@ verileri okutmak için;
 
 Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <code>$_SESSION["lang"]="tr";</code> kodunu tr/en olarak değiştirerek panelin varsayılan dilini değiştirebilirsiniz.
 
-<h3>Örnek Görseller</h3>
+<h2>Örnek Görseller</h2>
 
 <h4>Ana Sayfa</h4>
 
