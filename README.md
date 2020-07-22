@@ -41,7 +41,6 @@ verileri okutmak için;
 
 Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <code>$_SESSION["lang"]="tr";</code> kodunu tr/en olarak değiştirerek panelin varsayılan dilini değiştirebilirsiniz.
 
-
 <h3>Örnek Görseller</h3>
 
 <h4>Ana Sayfa</h4>
@@ -55,3 +54,15 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 <h4>Ayarlar Sayfası</h4>
 
 <img src="https://user-images.githubusercontent.com/67686692/88079079-e3228280-cb85-11ea-984d-8abedfe1f2c9.png"/>
+
+
+
+<h2><u>Güncellemeler:</u></h2>
+
+<h4>22.07.2020:</h4>
+
+
+
+<h4>21.07.2020:</h4>
+
+- Logo Değiştirildi.
