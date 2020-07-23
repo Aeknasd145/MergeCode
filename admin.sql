@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3308
--- Üretim Zamanı: 22 Tem 2020, 11:52:51
+-- Üretim Zamanı: 23 Tem 2020, 18:45:20
 -- Sunucu sürümü: 8.0.18
 -- PHP Sürümü: 7.3.12
 
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `mail_settings` (
 --
 
 INSERT INTO `mail_settings` (`id`, `host`, `port`, `secure`, `mail`, `password`) VALUES
-(1, 'smtp.google.com', 587, 'tls', 'site@site.com', '123');
+(1, 'smtp.google.com', 587, 'tls', 'site@site.com', 'password');
 
 -- --------------------------------------------------------
 
