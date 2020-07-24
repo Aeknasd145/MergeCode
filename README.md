@@ -10,7 +10,7 @@
 
 4 - Seo ayarlarında başlık, açıklama, anahtar kelime, google analytics id ve google adsense id kaydetmekte ancak bunları yine temanıza entegre etmeniz gerekmektedir.
 
-
+5 - Mail adresinizin ayarlarını panelden "mail" menüsünden yapabilirsiniz. Gmail kullanacaksanız host, port ve güvenlik türü bölümlerini değiştirmeyin. Ayrıca gmail adresinizin güvenliği düşük uygulamalar tarafından kullanımını da açık hale getirin.
 
 
 <h2>"Hakkımızda" Sayfasını Entegre Etmek</h2>
@@ -61,9 +61,17 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 <h2><u>Güncellemeler:</u></h2>
 
+<h4>24.07.2020</h4>
+
+- Şifremi unuttum bölümü aktif hale getirildi.
+
+- Kullanıcılara ve abonelere mail gönderme bölümü aktif hale getirildi.
+
+- 1 sayfadaki 2 formu 2 ayrı sayfaya post ederken yaşanan hatalar giderildi.
+
 <h4>22.07.2020:</h4>
 
-- Giriş sayfası için giriş sınırı eklendi.
+- Giriş sayfası için giriş sınırı ve uzaklaştırma süresi özelliği eklendi.
 
 - Giriş sayfasındaki giriş sınırını ve uzaklaştırma süresini belirlemek için admin paneldeki "Güvenlik Ayarları" menüsündeki "Giriş Güvenliği" sekmesi aktif hale getirildi.
 
