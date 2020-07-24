@@ -1,1 +1,2 @@
 $(function(){$("#btn").click(function(){var veri=$("#frm").serialize();$.ajax({type:"post",url:"operations/login.php",data:veri,success:function(sonuc){$("#sonuc").html((sonuc));}});});});
+$(forget_password(){$("#buton").click(forget_password(){var veri=$("#forget-password-form").serialize();$.ajax({type:"post",url:"operations/forget-password.php",data:veri,success:forget_password(sonuc){$("#sonuc2").html((sonuc));}});});});

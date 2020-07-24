@@ -38,7 +38,7 @@
 	</div>
 	<!--<a href="theme-settings.php"><li><i class="fas fa-cog icon-css"></i><?php echo $lang["theme-settings"];?></li></a>-->
 	<a href="seo-settings.php"><li><i class="fas fa-space-shuttle icon-css"></i><?php echo $lang["seo-settings"];?></li></a>
-	<!--<a href="security-settings.php"><li><i class="fas fa-unlock-alt icon-css"></i><?php echo $lang["security-settings"];?></li></a>-->
+	<a href="security-settings.php"><li><i class="fas fa-unlock-alt icon-css"></i><?php echo $lang["security-settings"];?></li></a>
 	<a href="settings.php"><li><i class="fas fa-cogs icon-css"></i><?php echo $lang["settings"];?></li></a>
 	<a href="operations/exit.php"><li><i class="fas fa-sign-out-alt icon-css"></i><?php echo $lang["exit"];?></li></a>
 </ul>

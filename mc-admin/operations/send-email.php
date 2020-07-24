@@ -11,7 +11,6 @@
 	    }
 	    else {
 			require("../library/class.phpmailer.php");
-	    	$sayi = 1;
 	    	if($group=="users"){
 	    		$bak = $conn->query("SELECT * FROM users");
 	    	}
@@ -29,10 +28,9 @@
 	    	 	$secure = $mailoku["secure"];
 	    	 	$email = $mailoku["mail"];
 	    	 	$password = $mailoku["password"];
-	    	 } 
+	    	} 
 			while ($say = mysqli_fetch_array($bak)) {
-				$username = $say['username']; //update
-				$alici 	  = $say['email']; //update
+				$alici 	  = $say['email']; 
 				$mail = new PHPMailer();
 				$mail->IsSMTP();
 				$mail->SMTPDebug = 1; 
@@ -48,14 +46,13 @@
 				$mail->SetFrom($email, $title); //forwarder mail and person
 				$mail->AddAddress($alici);
 				$mail->Subject = $title; //Mail Title
-				$mail->Body = $content; //Your Mail, you can use like this: $ad."Your mail";
-				if(!$mail->Send()){
-					echo $sayi." - E-mail Error: ".$mail->ErrorInfo."<br>";
-					echo "Gmail kullanıyorsanız lütfen hesabınızın güvenliği düşük uygulamalara açık oduğunu kontrol edin!";
-				} else {
-					echo $sayi." - Succesful  <br>";
-				}
-				$sayi++;
+				$mail->Body = $content;
+			}
+			if(!$mail->Send()){
+				echo "E-mail Hatası: ".$mail->ErrorInfo."<br>";
+				echo "Gmail kullanıyorsanız lütfen hesabınızın güvenliği düşük uygulamalara açık oduğunu kontrol edin!";
+			} else {
+				echo "İşlem Başarılı. <br>";
 			}
 	    }
 	}
