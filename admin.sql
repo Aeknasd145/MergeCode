@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3308
--- Üretim Zamanı: 23 Tem 2020, 18:45:20
+-- Üretim Zamanı: 24 Tem 2020, 15:29:53
 -- Sunucu sürümü: 8.0.18
 -- PHP Sürümü: 7.3.12
 
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `mail_settings` (
 --
 
 INSERT INTO `mail_settings` (`id`, `host`, `port`, `secure`, `mail`, `password`) VALUES
-(1, 'smtp.google.com', 587, 'tls', 'site@site.com', 'password');
+(1, 'smtp.gmail.com', 587, 'tls', 'site@gmail.com', 'password');
 
 -- --------------------------------------------------------
 
@@ -164,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `subs` (
 --
 
 INSERT INTO `subs` (`id`, `username`, `email`) VALUES
-(1, 'admin', 'admin@gmail.com');
+(1, 'admin', 'demo@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -187,8 +187,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'demo@gmail.com'),
-(2, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com'),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com'),
+(2, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'demo@gmail.com'),
 (3, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'demsdo@gmail.com'),
 (4, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'admfasin@gmail.com'),
 (5, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'demasdasdo@gmail.com'),
