@@ -47,15 +47,15 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 <h4>Ana Sayfa</h4>
 
-<img src="https://user-images.githubusercontent.com/67686692/88078037-a1450c80-cb84-11ea-97de-c296fe601eb4.png"/>
+<img src="https://user-images.githubusercontent.com/67686692/88451857-d1c9c680-ce62-11ea-97d9-e2c853ebaec7.png"/>
 
-<h4>Kullanıcı Analiz Sayfası (Abone analiz sayfasıyla aynı tasarımda)</h4>
+<h4>Kullanıcı Verileri Sayfası (Abone verileri sayfasıyla aynı tasarımda)</h4>
 
-<img src="https://user-images.githubusercontent.com/67686692/88078806-8f179e00-cb85-11ea-93ec-43ce55096f64.png"/>
+<img src="https://user-images.githubusercontent.com/67686692/88451854-d0000300-ce62-11ea-95f6-18a74b8c28c7.png"/>
 
 <h4>Ayarlar Sayfası</h4>
 
-<img src="https://user-images.githubusercontent.com/67686692/88079079-e3228280-cb85-11ea-984d-8abedfe1f2c9.png"/>
+<img src="https://user-images.githubusercontent.com/67686692/88451856-d1c9c680-ce62-11ea-867e-256e977bdf25.png"/>
 
 
 
