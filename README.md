@@ -65,13 +65,19 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 - Blog bölümü geliştirildi.
 
+- Dil dosyasına entegre sayfa sayısı arttırıldı.
+
 <h4>29.07.2020</h4>
 
 - Blog bölümüne yeni özellikler eklendi.
 
+- Dil dosyasına entegre sayfa sayısı arttırıldı.
+
 <h4>28.07.2020</h4>
 
 - Blog bölümü eklendi.
+
+- Dil dosyasına entegre sayfa sayısı arttırıldı.
 
 <h4>25.07.2020</h4>
 
