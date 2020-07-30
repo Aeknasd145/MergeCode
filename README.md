@@ -61,6 +61,18 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 <h2><u>Güncellemeler:</u></h2>
 
+<h4>28.07.2020</h4>
+
+- Blog bölümü geliştirildi.
+
+<h4>29.07.2020</h4>
+
+- Blog bölümüne yeni özellikler eklendi.
+
+<h4>28.07.2020</h4>
+
+- Blog bölümü eklendi.
+
 <h4>25.07.2020</h4>
 
 - Dil ayarları bölümü eklendi. Ayarlardan seçtiğiniz dilin içeriğini buradan ayarlayabilirsiniz. (Ya da linkin sonuna ?lang=tr / ?lang=en yaparak ayarlamak istediğiniz dili seçebilirsiniz.
