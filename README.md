@@ -61,7 +61,7 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 <h2><u>Güncellemeler:</u></h2>
 
-<h4>28.07.2020</h4>
+<h4>30.07.2020</h4>
 
 - Blog bölümü geliştirildi.
 
