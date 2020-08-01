@@ -67,7 +67,7 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 - Sayfa içi css kodları style.css dosyasına aktarıldı.
 
-- Created and builted documentation.php
+- Created and built documentation.php
 
 <h4>31.07.2020</h4>
 
