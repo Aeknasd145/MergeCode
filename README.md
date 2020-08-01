@@ -67,6 +67,8 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 - Sayfa içi css kodları style.css dosyasına aktarıldı.
 
+- Created documentation.php
+
 <h4>31.07.2020</h4>
 
 - Ajax yönlendirmesi geliştirildi.
