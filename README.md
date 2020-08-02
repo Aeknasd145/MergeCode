@@ -61,13 +61,19 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 <h2><u>Güncellemeler:</u></h2>
 
+<h4>02.08.2020</h4>
+
+- Ayarlar sayfasına logo değiştirme özelliği eklendi.
+
+- Menü tasarımı geliştirildi.
+
 <h4>01.08.2020</h4>
 
 - Blog bölümü geliştirildi.
 
 - Sayfa içi css kodları style.css dosyasına aktarıldı.
 
-- Created and built documentation.php
+- documentation.php dosyası yapıldı.
 
 <h4>31.07.2020</h4>
 
