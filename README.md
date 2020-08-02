@@ -69,6 +69,8 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 - Mail gönderilecek abone ve kullanıcılar için mail alıp almama durumu dikkate alınarak gönderilme eklendi. (email_status=1 => mail almak istiyor, email_status=0 => mail almak istemiyor)
 
+- Dil dosyasına entegre sayfa sayısı arttırıldı.
+
 <h4>01.08.2020</h4>
 
 - Blog bölümü geliştirildi.
