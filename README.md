@@ -71,6 +71,10 @@ Varsayılan dili "operations" klasörünün içindeki login.php dosyasındaki <c
 
 - Dil dosyasına entegre sayfa sayısı arttırıldı.
 
+- SEO ayarları sayfası geliştirildi.
+
+- Ön Bakış sayfasındaki SEO eksikleri kısmı çalışır hale getirildi.
+
 <h4>01.08.2020</h4>
 
 - Blog bölümü geliştirildi.
