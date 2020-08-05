@@ -12,10 +12,10 @@
 	    else {
 			require("../library/class.phpmailer.php");
 	    	if($group=="users"){
-	    		$bak = $conn->query("SELECT * FROM users");
+	    		$bak = $conn->query("SELECT * FROM users WHERE email_status=1 ");
 	    	}
 	    	else if($group=="subs"){
-	    		$bak = $conn->query("SELECT * FROM subs");
+	    		$bak = $conn->query("SELECT * FROM subs WHERE email_status=1 ");
 	    	}
 	    	else {
 	    		echo "Grup seçiminde HATA!";

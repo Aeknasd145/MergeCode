@@ -11,7 +11,7 @@
 		header("Location:../security-settings.php");
 	}
 	else {
-		echo "Yetki dışı erişim";
+		echo "Unauthorized Access!!";
 		header("Location:../../index.php");
 		exit;
 	}

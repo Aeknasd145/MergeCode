@@ -2,7 +2,7 @@
 <?php 
 	include("../connect.php");
 	if($_POST){
-		echo $wanted_lang = addslashes(htmlspecialchars($_POST['lang']));
+		$wanted_lang = addslashes(htmlspecialchars($_POST['lang']));
 		if(!$wanted_lang && $_SESSION['lang']){
 			$wanted_lang = $_SESSION['lang'];
 		}
@@ -17,7 +17,6 @@
 		}
 		else {
 			$wanted_lang="tr";
-			echo "1";
 		}
 	    $i = 0;
 	    foreach ($lang as $key => $value) { $say++;

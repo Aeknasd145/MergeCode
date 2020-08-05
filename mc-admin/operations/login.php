@@ -65,7 +65,7 @@
 							$_SESSION["id"]=$sorgu_oku["id"];
 						}
 						if($_SESSION['id']){
-							$_SESSION["lang"]="tr";
+							$_SESSION["lang"]="en";
 							$conn->query("UPDATE login_attempt SET attempts='0' WHERE ip='$ip' && attempts_date='$attempts_date' ");
 							?>
 							<script type="text/javascript">
@@ -87,7 +87,7 @@
 					$_SESSION["id"]=$sorgu_oku["id"];
 				}
 				if($_SESSION['id']){
-					$_SESSION["lang"]="tr";
+					$_SESSION["lang"]="en";
 					$conn->query("UPDATE login_attempt SET attempts='0' WHERE ip='$ip' && attempts_date='$attempts_date' ");
 					?>
 					<script type="text/javascript">
