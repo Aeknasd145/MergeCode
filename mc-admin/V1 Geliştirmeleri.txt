@@ -1,0 +1,49 @@
+02.08.2020
+Ayarlar sayfasına logo değiştirme özelliği eklendi.
+
+Menü tasarımı geliştirildi.
+
+Mail gönderilecek abone ve kullanıcılar için mail alıp almama durumu dikkate alınarak gönderilme eklendi. (email_status=1 => mail almak istiyor, email_status=0 => mail almak istemiyor)
+
+Dil dosyasına entegre sayfa sayısı arttırıldı.
+
+01.08.2020
+Blog bölümü geliştirildi.
+
+Sayfa içi css kodları style.css dosyasına aktarıldı.
+
+documentation.php dosyası yapıldı.
+
+31.07.2020
+Ajax yönlendirmesi geliştirildi.
+30.07.2020
+Blog bölümü geliştirildi.
+
+Dil dosyasına entegre sayfa sayısı arttırıldı.
+
+29.07.2020
+Blog bölümüne yeni özellikler eklendi.
+
+Dil dosyasına entegre sayfa sayısı arttırıldı.
+
+28.07.2020
+Blog bölümü eklendi.
+
+Dil dosyasına entegre sayfa sayısı arttırıldı.
+
+25.07.2020
+Dil ayarları bölümü eklendi. Ayarlardan seçtiğiniz dilin içeriğini buradan ayarlayabilirsiniz. (Ya da linkin sonuna ?lang=tr / ?lang=en yaparak ayarlamak istediğiniz dili seçebilirsiniz.
+24.07.2020
+Şifremi unuttum bölümü aktif hale getirildi.
+
+Kullanıcılara ve abonelere mail gönderme bölümü aktif hale getirildi.
+
+1 sayfadaki 2 formu 2 ayrı sayfaya post ederken yaşanan hatalar giderildi.
+
+22.07.2020:
+Giriş sayfası için giriş sınırı ve uzaklaştırma süresi özelliği eklendi.
+
+Giriş sayfasındaki giriş sınırını ve uzaklaştırma süresini belirlemek için admin paneldeki "Güvenlik Ayarları" menüsündeki "Giriş Güvenliği" sekmesi aktif hale getirildi.
+
+21.07.2020:
+Logo Değiştirildi.

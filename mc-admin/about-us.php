@@ -1,39 +1,58 @@
 <?php 
 	include("header.php");
-	$user_sorgu = $conn->query("SELECT * FROM users ORDER BY id DESC");
-	while($user_oku=mysqli_fetch_array($user_sorgu)){
-		$usersay = $user_oku["id"];
-		break;
+	$about_us_query = $conn->query("SELECT * FROM about_us WHERE id='1' ");
+	while($read_about_us=mysqli_fetch_array($about_us_query)){
+		$title = $read_about_us["title"];
+		$content = $read_about_us["content"];
 	}
-	$user_sorgu = $conn->query("SELECT * FROM users ORDER BY id DESC LIMIT 10");
-	$abone_sorgu = $conn->query("SELECT * FROM subs");
-	$abone_say = mysqli_num_rows($abone_sorgu);
 ?>
-<script src="https://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="about-us.js"></script>
-<script type="text/javascript">$(function(){});</script>
 <div class="container-fluid h-100">
 	<div class="row h-100">
+
+		<!-- Sidebar -->
 		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="sidebar">
 			<?php include("sidebar.php"); ?>
 		</div>
+
+		<!-- Mobile Sidebar -->
 		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="sidebar-mobile">
 			<?php include("sidebar-mobile.php"); ?>
 		</div>
-		<div id="main-content" class="col-lg-10 col-md-10 col-sm-12 col-xs-12" style="text-align: center;">
+
+		<!-- Main Content -->
+		<div id="main-content" class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
 			<form id="frm">
-				<h2>Hakkımızda Sayfası Yönetimi</h2>
-				<div id="sonuc"></div><br />
-				<input type="text" name="title" placeholder="Başlık" style="border: solid 1px grey; border-radius: .35em; margin-top: 1%; width: 80%; height:7%; border: solid 1px grey;" required />
-				<textarea rows="15%" style="width: 80%; margin-top: 1%; border: solid 1px grey; border-radius: .35em;" name="content" placeholder="Hakkımızda sayfası içeriği" required></textarea><br>
-				<input style="width: 80%; border: solid 1px grey; border-radius: 1rem; padding: 8px" type="button" id="btn" value="Kaydet">
+				<h2 class="mt-4"><?php echo $lang["about-us-page-title"];?></h2>
+				<div class="col-12 text-center">
+					<div id="sonuc"></div><br />	
+				</div>
+				<div class="col-12">
+					<input class="input-85" type="text" name="title" placeholder="<?php echo $title;?>"/>	
+				</div>
+				<div class="col-12 mt-2">
+					<textarea class="input-85" rows="15%" name="content" placeholder='<?php echo $content;?>'></textarea><br>	
+				</div>
+				<div class="col-12 mt-2">
+					<input class="send-button-85" type="button" id="btn" value='<?php echo $lang["save"];?>'>	
+				</div>				
 			</form>
 		</div>
 	</div>
 </div>
-
-<!-- Font Awesome Kit -->
-<script src="https://kit.fontawesome.com/acae1827b1.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  
+<?php include("footer.php"); ?>
+<script type="text/javascript">
+$(function(){
+  	$("#btn").click(function(e){
+		e.preventDefault();
+    	var veri= $("#frm").serialize();
+	    $.ajax({
+	       	type:"post",
+	       	url:"operations/about-us.php",
+	       	data:veri,
+	       	success:function(sonuc){
+	       		$("#sonuc").html((sonuc));
+	    	}
+    	});
+	});
+});
+</script>

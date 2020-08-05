@@ -8,7 +8,6 @@
 		$wanted_lang = "en";
 	}
 ?>
-<script src="https://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
 <div class="container-fluid h-100">
 	<div class="row h-100">
 		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="sidebar">
@@ -20,12 +19,28 @@
 		<div id="main-content" class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
 			<div class="row justify-content-md-center">
 				<h2 class="col-12 text-center pt-3"><?php echo $lang["language-settings"];?></h2>
-				<div class="col-12" style="margin-bottom: 3%;">
-        			<div class="col-md-6 col-sm-12" style="float: right;">
-        				<input id="my_search" onkeyup="search()" style="border-radius: .35rem; border: solid 1px grey; float: right" type="text" name="search" placeholder="<?php echo $lang["search"];?>">
+				<div class="col-12">
+        			<div class="col-md-6 col-sm-12 float-left">
+    					<?php 
+    						if ($wanted_lang=="tr") {
+							?>
+								<div class="col-4 float-left"><a href="language-settings.php?lang=tr"><li class="list-group-item active"><?php echo $lang["tr"]; ?></li></a></div>
+ 								<div class="col-4 float-left"><a href="language-settings.php?lang=en"><li class="list-group-item"><?php echo $lang["en"]; ?></li></a></div>
+							<?php
+							}
+							else {
+							?>
+								<div class="col-4 float-left"><a href="language-settings.php?lang=tr"><li class="list-group-item"><?php echo $lang["tr"]; ?></li></a></div>
+ 								<div class="col-4 float-left"><a href="language-settings.php?lang=en"><li class="list-group-item active"><?php echo $lang["en"]; ?></li></a></div>	
+							<?php	
+							}
+    					?>
+        			</div>
+        			<div class="col-md-6 col-sm-12 float-right">
+        				<input id="my_search" class="float-right b-g-r" onkeyup="search()" type="text" name="search" placeholder='<?php echo $lang["search"];?>'>
         			</div>
         		</div>
-				<div class="col-12" style="text-align: center;">
+				<div class="col-12 text-center">
         			<div id="sonuc"></div><br />
         		</div>
         		<div class="col-12">
@@ -55,7 +70,7 @@
 										foreach ($lang as $key => $value) {
 											echo '<tr>
 										        	<td>'.trim($key).'</td>
-										        	<td><input type="text" name="'.trim($key).'" placeholder="'.trim($value).'"/></td>
+										        	<td><input class="input-100" type="text" name="'.trim($key).'" placeholder="'.trim($value).'"/></td>
 										        </tr>';
 										}	
 									?>
@@ -65,9 +80,8 @@
 						</table>
 					</div>
 					<div class="col-12">
-						<input style="width: 100%; background-color: lightblue; border: solid 1px lightblue; border-radius: .25rem;
-						 padding: 10px; font-family: Arial, Helvetica, sans-serif; margin-top: 2%" type="button" id="btn" value="<?php echo $lang["save"];?>">
-					</div>	
+						<input class="send-button-100 mb-2" type="button" id="btn" value='<?php echo $lang["save"];?>'>
+					</div>
 				</div>
 			</div>
 		</div>

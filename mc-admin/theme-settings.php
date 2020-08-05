@@ -10,7 +10,6 @@
 	}
 
 ?>
-
 	<div class="container-fluid h-100">
 		<div class="row h-100">
 			<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="sidebar">
