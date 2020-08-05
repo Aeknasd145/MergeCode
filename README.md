@@ -12,6 +12,7 @@
 
 5 - Mail adresinizin ayarlarını panelden "mail" menüsünden yapabilirsiniz. Gmail kullanacaksanız host, port ve güvenlik türü bölümlerini değiştirmeyin. Ayrıca gmail adresinizin güvenliği düşük uygulamalar tarafından kullanımını da açık hale getirin.
 
+6 - Entegre kodları için "Documentation" Klasörüne göz atın.
 
 <h2>"Hakkımızda" Sayfasını Entegre Etmek</h2>
 
