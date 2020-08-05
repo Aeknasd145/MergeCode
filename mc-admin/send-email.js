@@ -1,1 +1,0 @@
-$(function(){$("#btn").click(function(){var veri=$("#frm").serialize();$.ajax({type:"post",url:"operations/send-email.php",data:veri,success:function(sonuc){$("#sonuc").html((sonuc));}});});});
