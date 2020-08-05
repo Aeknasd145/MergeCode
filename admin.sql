@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3308
--- Üretim Zamanı: 30 Tem 2020, 13:21:36
+-- Üretim Zamanı: 05 Ağu 2020, 15:29:07
 -- Sunucu sürümü: 8.0.18
 -- PHP Sürümü: 7.3.12
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `about_us` (
 --
 
 INSERT INTO `about_us` (`id`, `title`, `content`) VALUES
-(1, 'Başlık', '&lt;a href=&quot;#&quot;&gt;s&lt;/a&gt;');
+(1, 'About Us Title', 'About Us Content');
 
 -- --------------------------------------------------------
 
@@ -72,19 +72,26 @@ CREATE TABLE IF NOT EXISTS `blog` (
   `keywords` text NOT NULL,
   `seo_url` varchar(125) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `view` int(11) NOT NULL,
+  `post_date` date NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `seo_url` (`seo_url`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
 
 --
--- Tablo döküm verisi `blog`
+-- Tablo için tablo yapısı `comments`
 --
 
-INSERT INTO `blog` (`id`, `title`, `content`, `descrip`, `keywords`, `seo_url`, `view`) VALUES
-(1, 'asd', 'ads', 'asd', 'asd', 'ads', 50),
-(2, 'asd', 'ads', 'asd', 'asd', 'adsd', 50),
-(3, 'asd', 'ads', 'asd', 'asd', 'adsf', 50),
-(4, 'asd', 'ads', 'asd', 'asd', 'adsdf', 50);
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL,
+  `content` text NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `confirmation` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -159,7 +166,7 @@ DROP TABLE IF EXISTS `seo`;
 CREATE TABLE IF NOT EXISTS `seo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `desc` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `descrip` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `keywords` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `analytics` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `adsense` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -170,8 +177,8 @@ CREATE TABLE IF NOT EXISTS `seo` (
 -- Tablo döküm verisi `seo`
 --
 
-INSERT INTO `seo` (`id`, `title`, `desc`, `keywords`, `analytics`, `adsense`) VALUES
-(1, 'Demo - Admin Paneli', 'Admin Paneli', 'admin paneli', 'Boş', 'boş');
+INSERT INTO `seo` (`id`, `title`, `descrip`, `keywords`, `analytics`, `adsense`) VALUES
+(1, 'Demo - Admin Paneli', 'Admin Paneli', 'admin paneli', 'NULL', 'NULL');
 
 -- --------------------------------------------------------
 
@@ -184,16 +191,17 @@ CREATE TABLE IF NOT EXISTS `subs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `email` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `email_status` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Tablo döküm verisi `subs`
 --
 
-INSERT INTO `subs` (`id`, `username`, `email`) VALUES
-(1, 'admin', 'demo@gmail.com');
+INSERT INTO `subs` (`id`, `username`, `email`, `email_status`) VALUES
+(1, 'admin', 'admin@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -207,27 +215,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `email_status` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Tablo döküm verisi `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com'),
-(2, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'asda@gmail.com'),
-(3, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'demsdo@gmail.com'),
-(4, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'admfasin@gmail.com'),
-(5, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'demasdasdo@gmail.com'),
-(6, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'admsain@gmail.com'),
-(7, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'demsdsado@gmail.com'),
-(8, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'admfasidsn@gmail.com'),
-(9, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'demof@gmail.com'),
-(10, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'admifn@gmail.com'),
-(11, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'demsfdo@gmail.com'),
-(12, 'adminf', '21232f297a57a5a743894a0e4a801fc3', 'fffas@gmail.com');
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `email_status`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
